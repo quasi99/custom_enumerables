@@ -4,7 +4,7 @@ module Enumerable
   def my_each
     return unless block_given?
 
-    (0...length).each do |i|
+    for i in 0...self.length
       yield self[i]
     end
   end
@@ -12,7 +12,7 @@ module Enumerable
   def my_each_with_index
     return unless block_given?
 
-    (0...length).each do |i|
+    for i in 0...self.length
       yield self[i], i
     end
   end
